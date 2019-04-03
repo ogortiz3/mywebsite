@@ -1,12 +1,17 @@
-var moonY = 129
-
-
+ var moonY = 129 
+ var shootingStar;
+ 
 function setup() {
   createCanvas(500, 500);
+  shootingStar = new ShootingStar();
+ frameRate(30) 
+  
 }
 
 function draw() {
   background(38, 34, 98);
+  shootingStar.draw();
+  
   
   //moon
   fill(255, 255, 255);
@@ -83,4 +88,32 @@ endShape(CLOSE);
   fill(255,255, 255);
   rect( 271,415,76,4);
   
+  
+  
+  
+  let s = 'Olivia Ortiz';
+fill(255);
+text(s, 130, 300, 4000, 4000); // Text wraps within text box
 } 
+
+function ShootingStar() {
+  this.x = random(windowWidth-200);
+  this.y = random(windowHeight-400);
+  this.w = 6;
+  this.h = 4;
+}
+
+
+ShootingStar.prototype.draw = function() {
+  noStroke();
+  fill(255, 255, 0);
+  ellipse(this.x, this.y, this.w, this.h);
+  if (this.h > 0) {
+    this.h -= 0.5;
+  }
+  this.w += 7;
+  this.x += 5;
+}
+
+
+
