@@ -24,7 +24,7 @@ function draw() {
   
   noStroke();
   fill(43, 57, 144);
-  rect(0, 383, width, 120); 
+  rect(0, 500, width, 120); 
   
     //water reflectioin
   fill(0, 113, 180);
