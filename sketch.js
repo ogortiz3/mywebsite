@@ -4,7 +4,7 @@ var x= 280;
 var moonRadius = 17;
 
 function setup() {
-  var canvas = createCanvas(windowWidth, 500);
+  var canvas = createCanvas(windowWidth, 600);
   canvas.parent('header');
 }
 
